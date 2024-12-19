@@ -7,3 +7,17 @@ Provides a risk-based approach to Audit and Regulatory Controls Management and c
 
 ## Governance & Policy Controls
 Governance and Policy Controls Management serves as the foundation for a program by outlining the structure, authority, and processes required for the organization through the clearly defined governance structure, stratification of authority, defined and well-communicated policies, procedures and the supporting processes critical to empowering an effective program.
+
+## IT & Cybersecurity Risk
+Technology drives the global economy. Unfortunately, risks such as cybersecurity threats and technology failures are nearly impossible to predict. IT & Security Risk Management is foundational to organizational strategy to manage technology risk. Universally, IT and Cybersecurity Risk Management supports organizational business initiatives, or enabling IT Audit and Regulatory Control compliance.
+
+## 3rd-party & Vendor Risk
+The exponential increase in organizational dependencies on third-party providers means that organizations also inherit third-party risks. Third-Party and Vendor Risk Management enables you to automate oversight of third-party relationships, allowing organizations to prioritize governance necessary to manage risk across the entire third-party management lifecycle.
+
+## Internal Audit & Financial Controls
+Internal Audit and Financial Controls Management reduces Audit and Regulatory Controls compliance burdens by assessing controls through a risk-based approach. Integrated standards and frameworks help simplify processes, productivity and collaboration. Streamline the process for end-to-end Internal Audit and Financial Controls Management.
+
+## Resiliency & Business Continuity
+The exponentially emerging and prolonged onslaught of pandemic, climate change, geopolitical forces, supply chain and technology disruptions can threaten organizations. Resilience and Business Continuity Management provides an interactive, automated approach to the prioritization, planning, coordination, engagement, and insights needed to strengthen resiliency.
+
+![alt text](https://github.com/[fullstackdev-42]/[audit-machine]/blob/[main]/images/image.png?raw=true)
