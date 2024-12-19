@@ -20,4 +20,4 @@ Internal Audit and Financial Controls Management reduces Audit and Regulatory Co
 ## Resiliency & Business Continuity
 The exponentially emerging and prolonged onslaught of pandemic, climate change, geopolitical forces, supply chain and technology disruptions can threaten organizations. Resilience and Business Continuity Management provides an interactive, automated approach to the prioritization, planning, coordination, engagement, and insights needed to strengthen resiliency.
 
-![alt text](https://github.com/[fullstackdev-42]/[audit-machine]/blob/[main]/images/image.png?raw=true)
+![alt text](https://github.com/fullstackdev-42/audit-machine/blob/main/images/image.png?raw=true)
