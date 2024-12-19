@@ -2,6 +2,10 @@
 This integrated risk management solution provides a Roadmap to Risk Reduction by delivering comprehensive, customizable, and intuitive enterprise solutions by supporting
 **80+ Auto-mapped frameworks, automated documentation, real-time status, risk & maturity**
 
+
+![alt text](https://github.com/fullstackdev-42/audit-machine/blob/main/images/image.png?raw=true)
+
+
 ## Audit & Regulatory Controls
 Provides a risk-based approach to Audit and Regulatory Controls Management and consolidates the entire process within a single source of truth. Supporting ALL the frameworks and standards the world has to offer such as StateRAMP, FedRAMP, CMMC, HIPAA, 800-53, CJIS, DFARS, SOC 1, SOC 2, ISO 27001, NERC CIP, SOX 404, PCI, EUCS, C5 and more.
 
@@ -19,5 +23,3 @@ Internal Audit and Financial Controls Management reduces Audit and Regulatory Co
 
 ## Resiliency & Business Continuity
 The exponentially emerging and prolonged onslaught of pandemic, climate change, geopolitical forces, supply chain and technology disruptions can threaten organizations. Resilience and Business Continuity Management provides an interactive, automated approach to the prioritization, planning, coordination, engagement, and insights needed to strengthen resiliency.
-
-![alt text](https://github.com/fullstackdev-42/audit-machine/blob/main/images/image.png?raw=true)
