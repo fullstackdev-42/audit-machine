@@ -1,0 +1,20 @@
+10-23-2018-01-02-31 ERROR Running Statement: 
+
+
+ALTER TABLE `ap_forms` ADD `logic_approver_enable` TINYINT NOT NULL DEFAULT '0'
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'auditmachine.ap_forms' doesn't exist
+10-23-2018-01-02-31 ERROR Running Statement: 
+
+ALTER TABLE `ap_forms` ADD `logic_approver_enable_1_a` TINYINT NOT NULL DEFAULT '0'
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'auditmachine.ap_forms' doesn't exist
+10-23-2018-01-02-31 ERROR Running Statement: 
+
+ALTER TABLE `ap_forms` DROP `logic_approver_enable`
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'auditmachine.ap_forms' doesn't exist
+10-23-2018-01-02-31 ERROR Running Statement: 
+
+ALTER TABLE `ap_forms` DROP `logic_approver_enable_1_a`
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'auditmachine.ap_forms' doesn't exist
+10-23-2018-01-02-31 ERROR Running Statement: 
+
+SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty

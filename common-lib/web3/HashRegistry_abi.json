@@ -1,0 +1,497 @@
+[
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getEntryById",
+    "outputs": [
+      {
+        "name": "entryId",
+        "type": "uint256"
+      },
+      {
+        "name": "documentHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "submittedBy",
+        "type": "address"
+      },
+      {
+        "name": "submittedAt",
+        "type": "uint256"
+      },
+      {
+        "name": "isRevoked",
+        "type": "bool"
+      },
+      {
+        "name": "revokedBy",
+        "type": "address"
+      },
+      {
+        "name": "revokedAt",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "entryByDocumentHash",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "isAdmin",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_documentHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "revokeEntry",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "isAuthorizedSigner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_authorized",
+        "type": "address"
+      }
+    ],
+    "name": "authorizeAdmin",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_documentHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "addEntry",
+    "outputs": [
+      {
+        "name": "entryId",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_documentHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "_onBehalfOf",
+        "type": "address"
+      }
+    ],
+    "name": "addEntryFor",
+    "outputs": [
+      {
+        "name": "entryId",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getEntryCount",
+    "outputs": [
+      {
+        "name": "entryCount",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_deauthorized",
+        "type": "address"
+      }
+    ],
+    "name": "deauthorizeSigner",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_deauthorized",
+        "type": "address"
+      }
+    ],
+    "name": "deauthorizeAdmin",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "entries",
+    "outputs": [
+      {
+        "name": "documentHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "submittedBy",
+        "type": "address"
+      },
+      {
+        "name": "submittedAt",
+        "type": "uint256"
+      },
+      {
+        "name": "isRevoked",
+        "type": "bool"
+      },
+      {
+        "name": "revokedBy",
+        "type": "address"
+      },
+      {
+        "name": "revokedAt",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_authorized",
+        "type": "address"
+      }
+    ],
+    "name": "authorizeSigner",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_documentHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getEntryByDocumentHash",
+    "outputs": [
+      {
+        "name": "entryId",
+        "type": "uint256"
+      },
+      {
+        "name": "documentHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "submittedBy",
+        "type": "address"
+      },
+      {
+        "name": "submittedAt",
+        "type": "uint256"
+      },
+      {
+        "name": "isRevoked",
+        "type": "bool"
+      },
+      {
+        "name": "revokedBy",
+        "type": "address"
+      },
+      {
+        "name": "revokedAt",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_signer",
+        "type": "address"
+      }
+    ],
+    "name": "getEntriesBySigner",
+    "outputs": [
+      {
+        "name": "entryIds",
+        "type": "uint256[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "entriesBySigner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "performedBy",
+        "type": "address"
+      }
+    ],
+    "name": "AdministrativeAction",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "authorizedAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "authorizedBy",
+        "type": "address"
+      }
+    ],
+    "name": "AdminAuthorized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "deauthorizedAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "deauthorizedBy",
+        "type": "address"
+      }
+    ],
+    "name": "AdminDeauthorized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "authorizedAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "authorizedBy",
+        "type": "address"
+      }
+    ],
+    "name": "SignerAuthorized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "deauthorizedAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "deauthorizedBy",
+        "type": "address"
+      }
+    ],
+    "name": "SignerDeauthorized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "entryId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "submittedBy",
+        "type": "address"
+      }
+    ],
+    "name": "EntryAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "entryId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "revokedBy",
+        "type": "address"
+      }
+    ],
+    "name": "EntryRevoked",
+    "type": "event"
+  }
+]

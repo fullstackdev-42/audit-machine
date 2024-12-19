@@ -1,0 +1,2 @@
+-- UPDATE `ap_settings` SET `itauditmachine_version` = "7.6";
+ALTER TABLE `ap_template_document_creation` ADD `added_files` TEXT NULL DEFAULT NULL AFTER `isZip`;

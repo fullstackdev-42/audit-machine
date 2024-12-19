@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /mnt/ITAM_Encrypted/html/stage
+hooks:
+  # ApplicationStart:
+    
+  # BeforeInstall:
+    
+  AfterInstall:
+    - location: scripts/configfiles.sh
+      timeout: 3600    

@@ -1,0 +1,10 @@
+{
+    "name": "continuumgrc/auditprotocol",
+    "description": "Module for Continuum Admin system",
+    "type": "project",
+    "minimum-stability": "stable",
+    "require": {
+        "phpfastcache/phpfastcache": "^8.0",
+        "maximebf/debugbar": "^1.17"
+    }
+}

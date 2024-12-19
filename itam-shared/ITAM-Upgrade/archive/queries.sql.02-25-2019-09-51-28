@@ -1,0 +1,1 @@
+UPDATE `ap_settings` SET `itauditmachine_version` = "7.3.2";

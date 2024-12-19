@@ -1,0 +1,85 @@
+image: atlassian/default-image:2
+pipelines:
+  custom: # Pipelines that can only be triggered manually sam
+    production:
+      - step:
+          name: Build
+          script:
+            - zip -r myapp.zip .
+          artifacts:
+            - myapp.zip
+      - step:
+          name: Upload to S3
+          services:
+            - docker
+          script:
+            - pipe: atlassian/aws-code-deploy:0.2.7
+              variables:
+                S3_BUCKET: $S3_BUCKET
+                DEPLOYMENT_GROUP: $DEPLOYMENT_GROUP
+                DEPLOYMENT_CONFIG: 'CodeDeployDefault.AllAtOnce'
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                APPLICATION_NAME: $APPLICATION_NAME
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                COMMAND: 'upload'
+                ZIP_FILE: 'myapp.zip'
+                DEBUG: 'TRUE'
+      - step:
+          name: Deploy with CodeDeploy
+          services:
+            - docker
+          script:
+            - pipe: atlassian/aws-code-deploy:0.2.3
+              variables:
+                S3_BUCKET: $S3_BUCKET
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                COMMAND: 'deploy'
+                APPLICATION_NAME: $APPLICATION_NAME
+                DEPLOYMENT_GROUP: $DEPLOYMENT_GROUP
+                IGNORE_APPLICATION_STOP_FAILURES: 'true'
+                FILE_EXISTS_BEHAVIOR: 'OVERWRITE'
+                WAIT: 'true'
+    qualityassurance:
+      - step:
+          name: Build
+          script:
+            - zip -r myapp.zip .
+          artifacts:
+            - myapp.zip
+      - step:
+          name: Upload to S3
+          services:
+            - docker
+          script:
+            - pipe: atlassian/aws-code-deploy:0.2.7
+              variables:
+                S3_BUCKET: $S3_BUCKET
+                DEPLOYMENT_GROUP: $DEPLOYMENT_GROUP
+                DEPLOYMENT_CONFIG: 'CodeDeployDefault.AllAtOnce'
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                APPLICATION_NAME: $APPLICATION_NAME
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                COMMAND: 'upload'
+                ZIP_FILE: 'myapp.zip'
+                DEBUG: 'TRUE'
+      - step:
+          name: Deploy with CodeDeploy
+          services:
+            - docker
+          script:
+            - pipe: atlassian/aws-code-deploy:0.2.3
+              variables:
+                S3_BUCKET: $S3_BUCKET
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                COMMAND: 'deploy'
+                APPLICATION_NAME: $APPLICATION_NAME
+                DEPLOYMENT_GROUP: $DEPLOYMENT_GROUP
+                IGNORE_APPLICATION_STOP_FAILURES: 'true'
+                FILE_EXISTS_BEHAVIOR: 'OVERWRITE'
+                WAIT: 'true'

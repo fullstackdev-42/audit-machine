@@ -1,0 +1,53 @@
+#banner .overlay {
+	display: none;
+}
+
+#header-wrapper-bgtop {
+	background: url(images/header-wrapper-bg.jpg) repeat-x left top;
+}
+
+#header-wrapper-bgbtm {
+	background: none;
+}
+
+#page-image-container {
+	display: none;
+}
+
+ul.style2 .light-bg {
+	border-top: 1px solid #B4BBBB;
+	border-left: 1px solid #B4BBBB;
+}
+
+ul.style2 .dark-bg {
+	border-top: 1px solid #A4ADAD;
+	border-left: 1px solid #A4ADAD;
+}
+
+#featured-box .title span {
+	background: url(images/featured-date-bg_ie6.png) no-repeat left top;
+}
+
+#menu {
+	background: url(images/menu-wrapper-bg_ie6.png) no-repeat left top;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu li.active {
+	background: url(images/menu-active-bg_ie6.png) repeat;
+}
+
+.dropotron {
+	margin-left: 0px;
+	background: url(images/menu-dropotron-bg_ie6.png) no-repeat left bottom;
+}
+
+
+
+
+
+
+

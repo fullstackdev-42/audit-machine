@@ -1,0 +1,15 @@
+*~
+.DS_Store
+.htaccess
+error_log
+package-lock.json
+portal/template_output
+auditprotocol/data
+policymachine/customerdocuments
+itam-shared/api/phpsocket.io
+*.zip
+*.docx
+*.tar
+/config.php
+.config.php
+/index.php

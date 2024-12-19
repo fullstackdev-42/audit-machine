@@ -1,0 +1,2 @@
+
+UPDATE `ap_settings` SET `disclaimer_message` = 'You are about to download confidential information from a secure Continuum GRC system to your local system creating a potential information exposure. While it is your right to do so, it is recommended that you do not without a business need to know.';

@@ -1,0 +1,89 @@
+CREATE TABLE `ap_form_approvals` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`user_id` int(11) NOT NULL,
+`company_id` int(11) NOT NULL,
+`form_id` int(11) NOT NULL,
+`user_order` tinyint(4) NOT NULL,
+`is_replied` int(11) NOT NULL DEFAULT '0',
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `ap_approval_logic_conditions` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `user_id` int(11) NOT NULL,
+ `form_id` int(11) NOT NULL,
+ `user_order` tinyint(4) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+ALTER TABLE `ap_forms` ADD `logic_approver_enable` TINYINT NOT NULL DEFAULT '0';
+
+ALTER TABLE `ap_forms` ADD `logic_approver_enable_1_a` TINYINT NOT NULL DEFAULT '0';
+
+ALTER TABLE `ap_approval_logic_conditions` ADD `user_id_created` TINYINT NOT NULL;
+
+ALTER TABLE `ap_form_approvals` ADD `message` TEXT NULL;
+
+
+CREATE TABLE `ap_email_logic_conditions_final_approval_status` (
+  `aec_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `form_id` int(11) NOT NULL,
+  `target_rule_id` int(11) NOT NULL,
+  `element_name` varchar(50) NOT NULL DEFAULT '',
+  `rule_condition` varchar(15) NOT NULL DEFAULT 'is',
+  `rule_keyword` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`aec_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `ap_approver_logic` (
+  `form_id` int(11) NOT NULL,
+  `rule_id` int(11) NOT NULL,
+  `rule_all_any` varchar(3) NOT NULL DEFAULT 'all',
+  `target_email` text NOT NULL,
+  `template_name` varchar(15) NOT NULL DEFAULT 'notification' COMMENT 'notification - confirmation - custom',
+  `custom_from_name` text,
+  `custom_from_email` varchar(255) NOT NULL DEFAULT '',
+  `custom_subject` text,
+  `custom_content` text,
+  `custom_plain_text` int(1) NOT NULL DEFAULT '0',
+  `custom_replyto_email` varchar(255) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `ap_approver_logic_conditions` (
+  `aec_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `form_id` int(11) NOT NULL,
+  `target_rule_id` int(11) NOT NULL,
+  `element_name` varchar(50) NOT NULL DEFAULT '',
+  `rule_condition` varchar(15) NOT NULL DEFAULT 'is',
+  `rule_keyword` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`aec_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `ap_approver_logic` ADD `user_id` INT NOT NULL AFTER `custom_replyto_email`;
+
+CREATE TABLE `ap_form_approval_logic_data` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `user_id` int(11) NOT NULL,
+ `form_id` int(11) NOT NULL,
+ `data` longtext NOT NULL,
+ `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `ap_form_approval_logic_entry_data` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `company_id` int(11) NOT NULL,
+ `form_id` int(11) NOT NULL,
+ `data` longtext NOT NULL,
+ `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `ap_forms` DROP `logic_approver_enable`;
+
+ALTER TABLE `ap_forms` DROP `logic_approver_enable_1_a`;
+
+DROP TABLE IF EXISTS `ap_approval_logic_conditions`;

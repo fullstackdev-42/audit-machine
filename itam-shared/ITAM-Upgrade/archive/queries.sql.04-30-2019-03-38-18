@@ -1,0 +1,7 @@
+ CREATE TABLE `ap_old_password_hash` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `user_id` int(11) NOT NULL,
+ `password` varchar(255) NOT NULL,
+ `is_admin` tinyint(4) NOT NULL COMMENT '1 - admin, 0 - portal',
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
